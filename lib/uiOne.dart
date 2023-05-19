@@ -15,7 +15,6 @@ class _Uione extends State<Uione> {
   Widget build(BuildContext context) {
    return Column(
     
-    crossAxisAlignment: CrossAxisAlignment.stretch,
     children:  [
     const  SizedBox(height: 200),
     const Icon(Icons.access_time, size: 80, color: Color.fromARGB(255, 235, 165, 45),),

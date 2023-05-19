@@ -28,6 +28,7 @@ class _Uitwo extends State<Uitwo> {
           const  SizedBox(width: 10),
           const  Text(" Enable Notification", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
           const  SizedBox(width: 10),
+          
            Switch(
             inactiveThumbColor: Colors.black,
             activeTrackColor: Colors.black,
@@ -68,11 +69,7 @@ class _Uitwo extends State<Uitwo> {
         ],
        ),   
       const  SizedBox(height: 20,),
-      const  Text("Grant access to contacts for Friday App to connect with friends. We ensure encryption and privacy of your contact, always!", style: TextStyle(fontSize: 20),),
-   
-   
-   
-   
+      const  Text("Grant access to contacts for Friday App to connect with friends. We ensure encryption and privacy of your contact, always!", style: TextStyle(fontSize: 20),),  
       ],
      ),
    );
