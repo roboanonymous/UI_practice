@@ -11,32 +11,62 @@ class uithree extends StatefulWidget {
 class _uithree extends State<uithree> {
   @override
   Widget build(BuildContext context) {
-    return Scrollbar(
+    return SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
+        padding: EdgeInsets.fromLTRB(15, 15, 0, 15),
        child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 50,),
-          const Text("Andrew",  style: TextStyle( fontSize: 30),),
+          const Text("Andrew",  style: TextStyle( fontSize: 30, fontWeight: FontWeight.bold),),
           Row(
             children:  [
              const  Text("Welcome Back!", style: TextStyle(color: Color.fromARGB(255, 138, 136, 136), fontSize: 30),),
              const SizedBox(width: 80,),
               IconButton(onPressed: (){}, 
-              icon: const Icon(Icons.add_circle),
+              icon: const Icon(Icons.add_circle_rounded),
               iconSize: 40,
-              color: Color.fromARGB(221, 25, 40, 172),
+              color: Color.fromARGB(221, 0, 0, 128),
               )
             ],
           ),
           const SizedBox(height: 30,),
           Container(
-            
-            height: 200,
-            width: 300,
-              decoration: const  BoxDecoration(
-                color:  Color.fromARGB(221, 25, 40, 172),
+            height: 210,
+            width: 320,
+              decoration:   BoxDecoration(
+                borderRadius: BorderRadius.circular(40),
+                color:  Color.fromARGB(221, 0, 0, 128),
+              ),
+              padding: EdgeInsets.all(30),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:  [
+                  const Text("Balance", style: TextStyle(color: Colors.white, fontSize: 18,),),
+                  const SizedBox(height: 15,),
+                  const Text("\$18,678", style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),),
+                   const SizedBox(height: 15,),
+                  const Text("....   ....    ....  1234", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
+                  const SizedBox(height: 15,),
+                  Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("VALID THRU", style: TextStyle(color: Colors.white, fontSize: 10)),
+                          Text("10/20", style: TextStyle(color: Colors.white, fontSize: 10)),
+                        ],
+                      ),
+                      const SizedBox(width: 20,),
+                      Column(
+                        children: [
+                          Text("CVV",style: TextStyle(color: Colors.white, fontSize: 10)),
+                          Text("...",style: TextStyle(color: Colors.white, fontSize: 10)),
+                        ],
+                      )
+                    ],
+                  )
+                ],
               ),
             
           ),
@@ -44,109 +74,110 @@ class _uithree extends State<uithree> {
            const  Text("Recent Transaction",style: TextStyle(fontWeight: FontWeight.w800, fontSize: 25), ),
            const SizedBox(height: 20,),
            SizedBox(
-            height: 300,
+            height: 500,
              child: ListView(
-              padding: EdgeInsets.all(20),
-              children: <Widget>[
-                Container(
-                  height: 80,
-                  padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 178, 217, 220),
-                    borderRadius: BorderRadius.circular(60),
+                padding: EdgeInsets.all(20),
+                children: <Widget>[
+                  Container(
+                    height: 80,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(100, 178, 217, 220),
+                      borderRadius: BorderRadius.circular(60),
+                    ),
+                    
+                    child: Row(
+                      children: [
+                      Container(   
+                        width: 40,
+                        height: 40,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color.fromARGB(50, 97, 192, 192),
+                        ),
+                      ),
+                      const SizedBox(width: 20,),
+                        Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                         children:const [
+                          Text("Media", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
+                          Text("Last Transaction", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
+                          ],
+                        ),
+                        const SizedBox(width: 50,),
+                        const Text("-\$22,40", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 20,),
+                  Container(
+                    height: 80,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(100, 224, 202, 217),
+                      borderRadius: BorderRadius.circular(60),
+                    ),
+                    
+                    child: Row(
+                      children: [
+                      Container(   
+                        width: 40,
+                        height: 40,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color:  Color.fromARGB(50, 227, 192, 216),
+                        ),
+                      ),
+                      const SizedBox(width: 20,),
+                        Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                         children:const [
+                          Text("Salary", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
+                          Text("Last Transaction", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
+                          ],
+                        ),
+                        const SizedBox(width: 50,),
+                        Text("+\$2,400", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 20,),
+                  Container(
+                    height: 80,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(100, 254, 241, 167),
+                      borderRadius: BorderRadius.circular(60),
+                    ),
+                    
+                    child: Row(
+                      children: [
+                      Container(   
+                        width: 40,
+                        height: 40,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color.fromARGB(50, 252, 237, 148),
+                        ),
+                      ),
+                      const SizedBox(width: 20,),
+                        Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                         children:const [
+                          Text("Travel", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
+                          Text("Last Transaction", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
+                          ],
+                        ),
+                        const SizedBox(width: 50,),
+                        Text("-\$22,40", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
+                      ],
+                    ),
                   ),
                   
-                  child: Row(
-                    children: [
-                    Container(   
-                      width: 40,
-                      height: 40,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color.fromARGB(255, 97, 192, 192),
-                      ),
-                    ),
-                    const SizedBox(width: 20,),
-                      Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                       children:const [
-                        Text("Media", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
-                        Text("Last Transaction", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
-                        ],
-                      ),
-                      const SizedBox(width: 50,),
-                      const Text("-\$22,40", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 20,),
-                Container(
-                  height: 80,
-                  padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 224, 202, 217),
-                    borderRadius: BorderRadius.circular(60),
-                  ),
-                  
-                  child: Row(
-                    children: [
-                    Container(   
-                      width: 40,
-                      height: 40,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color:  Color.fromARGB(255, 227, 192, 216),
-                      ),
-                    ),
-                    const SizedBox(width: 20,),
-                      Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                       children:const [
-                        Text("Salary", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
-                        Text("Last Transaction", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
-                        ],
-                      ),
-                      const SizedBox(width: 50,),
-                      Text("+\$2,400", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 20,),
-                Container(
-                  height: 80,
-                  padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 254, 241, 167),
-                    borderRadius: BorderRadius.circular(60),
-                  ),
-                  
-                  child: Row(
-                    children: [
-                    Container(   
-                      width: 40,
-                      height: 40,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color.fromARGB(255, 252, 237, 148),
-                      ),
-                    ),
-                    const SizedBox(width: 20,),
-                      Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                       children:const [
-                        Text("Travel", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
-                        Text("Last Transaction", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
-                        ],
-                      ),
-                      const SizedBox(width: 50,),
-                      Text("-\$22,40", style: TextStyle(color: Color.fromARGB(255, 121, 120, 120)),)
-                    ],
-                  ),
-                ),
-                
-              ],
-             ),
+                ],
+               ),
            ),
+           
            
         ],
         ),
