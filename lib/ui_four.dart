@@ -25,10 +25,10 @@ class UiFour extends StatelessWidget {
                 width: 100,
                 decoration:   BoxDecoration(
                 image: const DecorationImage(
-                 image: AssetImage("assets/images/creditcard.jpg"),
+                 image: AssetImage("assets/images/img5.jpg"),
                  fit: BoxFit.fill,
                 ),
-               // borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
               ),
               ),
               SizedBox(width: 120,),
@@ -58,7 +58,7 @@ class UiFour extends StatelessWidget {
                  image: AssetImage("assets/images/img3.jpg"),
                  fit: BoxFit.fill,
                 ),
-                borderRadius: BorderRadius.circular(40),
+                borderRadius: BorderRadius.circular(10),
               ),
                 ),
           ),
@@ -69,7 +69,7 @@ class UiFour extends StatelessWidget {
             
             children: [
                Container(
-                height: 06,
+                height: 60,
                 width: 60,
                  decoration:   BoxDecoration(
                 image: const DecorationImage(
@@ -90,7 +90,7 @@ class UiFour extends StatelessWidget {
                  image: AssetImage("assets/images/img5.jpg"),
                  fit: BoxFit.fill,
                 ),
-               // borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
               ),
               ),
             ],
