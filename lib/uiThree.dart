@@ -34,9 +34,14 @@ class _uithree extends State<uithree> {
           Container(
             height: 210,
             width: 320,
+            
               decoration:   BoxDecoration(
+                image: new DecorationImage(
+                 image: new AssetImage("assets/images/creditcard.jpg"),
+              fit: BoxFit.fill,
+          ),
                 borderRadius: BorderRadius.circular(40),
-                color:  Color.fromARGB(221, 0, 0, 128),
+               // color:  Color.fromARGB(221, 0, 0, 128),
               ),
               padding: EdgeInsets.all(30),
               child: Column(
